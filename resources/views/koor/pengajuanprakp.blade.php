@@ -75,7 +75,7 @@
                         <th scope="col">No</th>
                         <th scope="col">Nim</th>
                         <th scope="col">Semester</th>
-                        <th scope="col">Dosen Pembimbing</th>
+                        <th scope="col">Dokumen</th>
                         <th scope="col">Status</th>
                         <th scope="col">Aksi</th>
                       </tr>
@@ -96,20 +96,7 @@
                                     @endif
                                 )
                             </td>
-                            
-                            <td>
-                                <form action="koor/tentukanpembimbing">
-                                <div class="form-group">
-                                <label for="" class="font-weight-bold"></label>
-                                <select class="form-control select" name="pembimbing">
-                                    @foreach($koor_kp as $pem)
-                                        <option value="{{ $pem->id_koor }}">{{ $pem->nama }}</option>
-                                    @endforeach
-                                </select>
-                                </div> 
-                                <button type="submit" class="btn btn-primary">Pilih</button>
-                                </form>
-                            </td>
+                            <td>{{ $key->dokumen }}</td>
 
                             <td>
                             @if($key->status == 0)
@@ -127,6 +114,7 @@
                         </td>
                           </tr>                                
                         @endforeach
+                        
                     </tbody>
                 </table>
             </div>

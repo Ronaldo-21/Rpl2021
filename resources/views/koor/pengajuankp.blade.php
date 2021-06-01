@@ -73,6 +73,8 @@
                     <thead>
                       <tr>
                         <th scope="col">No</th>
+                        <th scope="col">NIM</th>
+                        <th scope="col">Dokumen</th>
                         <th scope="col">Judul KP</th>
                         <th scope="col">Penguji</th>
                         <th scope="col">Tahun Akademik</th>
@@ -84,6 +86,8 @@
                       @foreach($kp as $key)
                           <tr>
                             <th scope="row">{{ $loop->iteration }}</th>
+                            <td>{{ $key->nim }}</td>
+                            <td>{{ $key->dokumen }}</td>
                             <td>{{ $key->judul }}</td>
                             <td>
                                 @if ($key->penguji == 0)

@@ -42,17 +42,26 @@ class MahasiswaController extends Controller
         DB::table('prakp')->insert([
             'tahun' => $request->tahun,
             'semester' => $request->semester,
-            'nim' => $request->nim,
             'judul' => $request->judul,
-            'pembimbing' => 0,
+            'nim' => $request->nim,
+            'tools' => $request->tools,
+            'spesifikasi' => $request->spesifikasi,
+            'dokumen' => $request->dokumen,
+            'penguji' => 0,
+            'ruang' => 0,
+            'lembaga' => $request->lembaga,
+            'pimpinan' => $request->pimpinan,
+            'alamat' => $request->alamat,
+            'no_telp' => $request->no_telp,
             'status' => 0
         ]);
         return redirect('/mhs/prakp')->with('success','Data Saved');
     }
 
-    public function formKP(){
-        $kp = DB::table('kp')->get();
-        return view('kp', ['kp' => $kp]);
+    public function formKP()
+    {
+    	$formkp = DB::table('kp')->get();
+    	return view('kp', ['formkp' => $formkp]);
     }
 
     public function simpanKP(Request $request){
@@ -62,7 +71,18 @@ class MahasiswaController extends Controller
             'nim' => $request->nim,
             'judul' => $request->judul,
             'tanggal_ujian' => '1111-11-11',
+            'tools' => $request->tools,
+            'spesifikasi' => $request->spesifikasi,
+            'dokumen' => $request->dokumen,
+            'lembaga' => $request->lembaga,
+            'pimpinan' => $request->pimpinan,
+            'alamat' => $request->alamat,
+            'no_telp' => $request->no_telp,
+            'status_ujian' => $request->status_ujian,
+            'nik' => 0,
+            'pembimbing' => 0,
             'penguji' => 0,
+            'ruang' => 0,
             'status' => 0
         ]);
         return redirect('/mhs/kp')->with('success','Data Saved');

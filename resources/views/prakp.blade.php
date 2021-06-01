@@ -98,6 +98,41 @@
                             <label for="" class="font-weight-bold">Judul Kerja Praktik</label>
                             <textarea name="judul" id="" cols="30" rows="3" class="form-control" name="judul" id="judul" placeholder="Masukkan Judul KP"></textarea>
                         </div>
+
+                        <div class="form-group">
+                            <label for="" class="font-weight-bold">Tools</label>
+                            <input type="text" class="form-control" name="tools" id="tools" placeholder="Tools">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="font-weight-bold">Spesifikasi</label>
+                            <input type="text" class="form-control" name="spesifikasi" id="spesifikasi" placeholder="Spesifikasi">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="font-weight-bold">Dokumen</label>
+                            <input type="text" class="form-control" name="dokumen" id="dokumen" placeholder="Dokumen">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="font-weight-bold">Lembaga</label>
+                            <input type="text" class="form-control" name="lembaga" id="lembaga" placeholder="Masukkan Lembaga">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="font-weight-bold">Pimpinan</label>
+                            <input type="text" class="form-control" name="pimpinan" id="pimpinan" placeholder="Masukkan Pimpinan">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="font-weight-bold">Alamat</label>
+                            <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Masukkan Alamat">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="font-weight-bold">No Telepon</label>
+                            <input type="text" class="form-control" name="no_telp" id="no_telp" placeholder="Masukkan No Telp">
+                        </div>
                         
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
@@ -111,7 +146,6 @@
                             <th scope="col">No</th>
                             <th scope="col">Nim</th>
                             <th scope="col">Judul KP</th>
-                            <th scope="col">Pembimbing</th>
                             <th scope="col">Tahun Akademik</th>
                             <th scope="col">Status</th>
                           </tr>
@@ -121,8 +155,7 @@
                           <tr>
                             <th scope="row">{{ $loop->iteration }}</th>
                             <td>{{ $key->nim }}</td>
-                            <td>{{ $key->judul }}</td>
-                            <td>{{ $key->pembimbing }}</td>                            
+                            <td>{{ $key->judul }}</td>                           
                             <td>
                                 {{ $key->tahun.$key->semester }}
                                 (

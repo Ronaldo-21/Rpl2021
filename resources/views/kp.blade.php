@@ -98,6 +98,43 @@
                             <label for="" class="font-weight-bold">Judul Kerja Praktik</label>
                             <textarea name="judul" id="" cols="30" rows="3" class="form-control" name="judul" id="judul" placeholder="Masukkan Judul KP"></textarea>
                         </div>
+
+                        <div class="form-group">
+                            <label for="" class="font-weight-bold">Tools</label>
+                            <textarea name="tools" id="" cols="30" rows="3" class="form-control" name="tools" id="tools" placeholder="Tools"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="font-weight-bold">Spesifikasi</label>
+                            <textarea name="spesifikasi" id="" cols="30" rows="3" class="form-control" name="spesifikasi" id="spesifikasi" placeholder="Masukkan Spesifikasi"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="font-weight-bold">Dokumen</label>
+                            <textarea name="dokumen" id="" cols="30" rows="3" class="form-control" name="dokumen" id="judul" placeholder="Masukkan Dokumen"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="font-weight-bold">Lembaga</label>
+                            <textarea name="lembaga" id="" cols="30" rows="3" class="form-control" name="lembaga" id="lembaga" placeholder="Masukkan Lembaga"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="font-weight-bold">Pimpinan</label>
+                            <textarea name="pimpinan" id="" cols="30" rows="3" class="form-control" name="pimpinan" id="pimpinan" placeholder="Masukkan Pimpinan"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="font-weight-bold">Alamat</label>
+                            <textarea name="alamat" id="" cols="30" rows="3" class="form-control" name="alamat" id="alamat" placeholder="Masukkan Alamat"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="font-weight-bold">No Telepon</label>
+                            <textarea name="no_telp" id="" cols="30" rows="3" class="form-control" name="no_telp" id="no_telp" placeholder="Masukkan Judul KP"></textarea>
+                        </div>
+
+                        
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
@@ -108,36 +145,38 @@
                         <thead>
                           <tr>
                             <th scope="col">No</th>
+                            <th scope="col">Nim</th>
                             <th scope="col">Judul KP</th>
                             <th scope="col">Penguji</th>
                             <th scope="col">Tahun Akademik</th>
-                            <th scope="col">Disetujui</th>
+                            <th scope="col">Status</th>
                           </tr>
                         </thead>
                         <tbody>
-                          @foreach($kp as $key)
+                          @foreach($formkp as $kp)
                               <tr>
                                 <th scope="row">{{ $loop->iteration }}</th>
-                                <td>{{ $key->judul }}</td>
+                                <td>{{ $kp->nim }}</td>
+                                <td>{{ $kp->judul }}</td>
                                 <td>
-                                    @if ($key->penguji == 0)
+                                    @if ($kp->penguji == 0)
                                         -
                                     @else
-                                        {{ $key->penguji }}
+                                        {{ $kp->penguji }}
                                     @endif
                                 </td>
                                 <td>
-                                    {{ $key->tahun.$key->semester }}
+                                    {{ $kp->tahun.$kp->semester }}
                                     (
-                                        @if($key->semester == 1)
-                                            {{ $key->tahun }} Ganjil
+                                        @if($kp->semester == 1)
+                                            {{ $kp->tahun }} Ganjil
                                         @else
-                                            {{ $key->tahun }} Genap
+                                            {{ $kp->tahun }} Genap
                                         @endif
                                     )
                                 </td>
                                 <td>
-                                    @if ($key->status == 0)
+                                    @if ($kp->status == 0)
                                         Belum Disetujui
                                     @else
                                         Sudah Disetujui

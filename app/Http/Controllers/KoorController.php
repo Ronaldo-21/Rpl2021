@@ -64,17 +64,13 @@ class KoorController extends Controller
     	return redirect('/koor/prakp');
     }
 
-    public function pilihpembimbing($id)
-    {
-    	DB::table('prakp')->where('id_prakp', '=', $id)->update(['pembimbing' => 1]);
-    	return redirect('/koor/prakp');
-    }
 
     public function prosesbatalprakp($id)
     {
     	DB::table('prakp')->where('id_prakp', '=', $id)->update(['status' => 0]);
     	return redirect('/koor/prakp');
     }
+
 
     public function kp()
     {

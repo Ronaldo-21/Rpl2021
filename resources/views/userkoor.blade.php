@@ -47,13 +47,12 @@
                     Layanan
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/koor/verifikasisuratket">Verifikasi Surat Keterangan KP</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/koor/verifikasiprakpdankp">Verifikasi Pra KP dan KP</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/koor/penjadwalanujian">Penjadwalan Ujian</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/koor/dafregiskp">Daftar Registrasi KP</a>
+                <a class="dropdown-item" href="/koor/suratketerangan">Verifikasi Surat Keterangan</a>
+                <a class="dropdown-item" href="/koor/prakp">Verifikasi Pengajuan Pra KP</a>
+                <a class="dropdown-item" href="/koor/kp">Verifikasi Pengajuan KP</a>
+                <a class="dropdown-item" href="/koor/daftarkp">Lihat daftar Registrasi KP</a>
+                <a class="dropdown-item" href="/koor/bataskp">Set Batas KP Per Tahun Akademik</a>
+                <a class="dropdown-item" href="/koor/jadwalkp">Set Jadwal KP</a>
                 </div>
             </ul>
             <form class="form-inline my-2 my-lg-0 ml-auto">

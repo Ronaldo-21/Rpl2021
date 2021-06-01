@@ -50,7 +50,7 @@ Route::get('/koor/home', 'KoorController@home');
 Route::get('/koor/suratketerangan', 'KoorController@suratketerangan');
 Route::get('/koor/prosessetujuisk/{any:}', 'KoorController@prosessetujuisk');
 Route::get('/koor/prosesbatalsk/{any:}', 'KoorController@prosesbatalsk');
-Route::get('/koor/tentukanpembimbing/{any:}', 'KoorController@pilihpembimbing');
+Route::get('/koor/pilihpembimbing/{any:}', 'KoorController@pilihpembimbing');
 Route::get('/koor/prakp', 'KoorController@prakp');
 Route::get('/koor/prosessetujuiprakp/{any:}', 'KoorController@prosessetujuiprakp');
 Route::get('/koor/prosesbatalprakp/{any:}', 'KoorController@prosesbatalprakp');

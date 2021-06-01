@@ -74,6 +74,7 @@
                       <tr>
                         <th scope="col">No</th>
                         <th scope="col">NIM</th>
+                        <th scope="col">Dokumen</th>
                         <th scope="col">Tahun Akademik</th>
                         <th scope="col">Status</th>
                         <th scope="col">Aksi</th>
@@ -84,6 +85,7 @@
                           <tr>
                             <th scope="row">{{ $loop->iteration }}</th>
                             <td>{{ $key->nim }}</td>
+                            <td>{{ $key->dokumen }}</td>
                             <td>
                                 {{ $key->tahun.$key->semester }}
                                 (
